@@ -1,17 +1,12 @@
 [[plugin.deps]]
-use = "Ape/open-with-cmd"
-rev = "433cf30"
-hash = "86e0312b01bc5762813c6c1d0517f073"
-
-[[plugin.deps]]
 use = "llanosrocas/yaziline"
-rev = "e06c47f"
-hash = "7df84299e89ffefd4686d1e20a295c8a"
+rev = "1342efe"
+hash = "a84a339953a568fee1d8beb63e6dca73"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
-rev = "b23e3a4"
-hash = "98e5f5af3efd3ba8bc2db0720187cc83"
+rev = "f1c6b69"
+hash = "6e789212eb41d937bab04877ca361099"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
@@ -25,9 +20,13 @@ hash = "e0ada736ea676c2bbb3ec705a49526ef"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "a1b678d"
+rev = "b12a9ab"
 hash = "dd97eede8e20e59cd2604e8006e470e2"
+
+[[plugin.deps]]
+use = "Ape/open-with-cmd"
+rev = "433cf30"
+hash = "86e0312b01bc5762813c6c1d0517f073"
 
 [flavor]
 deps = []
- 
