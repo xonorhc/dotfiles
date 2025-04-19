@@ -1,0 +1,33 @@
+[[manager.prepend_keymap]]
+on   = "!"
+run  = 'shell "$SHELL" --block'
+desc = "Open shell here"
+
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"
+desc = "Cancel input"
+
+[[manager.prepend_keymap]]
+on = "<C-y>"
+run = ["plugin wl-clipboard"]
+
+[[manager.prepend_keymap]]
+on   = "o"
+run  = "plugin open-with-cmd --args=block"
+desc = "Open with command in the terminal"
+
+[[manager.prepend_keymap]]
+on  = "M"
+run = "plugin mount"
+
+[[manager.prepend_keymap]]
+on   = [ ",", "s" ]
+run  = "plugin what-size"
+desc = "Calc size of selection or cwd" 
+
+[[manager.prepend_keymap]]
+on   = [ "g", "i" ]
+run  = "plugin lazygit"
+desc = "run lazygit"
+

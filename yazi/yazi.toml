@@ -1,0 +1,32 @@
+[opener]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+]
+edit = [
+	# { run = '$EDITOR "$@"', block = true, for = "unix" },
+	{ run = 'nvim "$@"', block = true, for = "unix" },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+]
+
+# [open]
+# prepend_rules = [
+# 	{ name = "*.json", use = "edit" },
+#
+# 	# Multiple openers for a single rule
+# 	{ name = "*.html", use = [ "open", "edit" ] },
+# ]
+# append_rules = [
+# 	{ name = "*", use = "my-fallback" },
+# ]
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"
