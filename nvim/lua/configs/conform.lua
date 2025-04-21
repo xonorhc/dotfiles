@@ -5,8 +5,11 @@ local options = {
     html = { "prettier" },
     markdown = { "prettier" },
     javascript = { "prettierd", "prettier", stop_after_first = true },
-    sql = { "pg_format" },
+    sql = { "sqlfluff", "pg_format", stop_after_first = true },
     sh = { "shfmt" },
+    -- rust = { "rustfmt", lsp_format = "fallback" },
+    -- python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+    -- python = { "isort", "black" },
   },
 
   -- format_on_save = {
