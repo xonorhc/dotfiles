@@ -15,6 +15,9 @@ spacing_before = align
 align_within = select_clause
 spacing_after = touch
 
+[sqlfluff:layout:type:join_on_condition]
+keyword_line_position = leading
+
 [sqlfluff:indentation]
 tab_space_size = 2
 indent_unit = space
