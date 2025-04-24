@@ -1,55 +1,21 @@
 # Dotfiles
 
-`$ pacman -Syu stow`
+Install dependencies:
 
-## Hyprland
+```sh
+$ pacman -Syu vim neovim kitty hyprland stow yazi
+```
 
-`# echo -e 'source=~/.config/hypr/userprefs.conf' >> ~/.config/hypr/hyprland.conf`
+Clone repository:
 
-`# ln -s ~/dotfiles/hyprland/.config/hypr/userprefs.conf ~/.config/hypr/userprefs.conf`
+```sh
+git clone https://github.com/xonorhc/dotfiles.git ~/.dotfiles
+```
 
-## Kitty
+Setup dotfiles:
 
-`$ pacman -S kitty`
-
-`# echo -e 'include ./custom.conf' >> ~/.config/kitty/kitty.conf`
-
-`# ln -s ~/dotfiles/kitty/custom.conf ~/.config/kitty/custom.conf`
-
-## VIM
-
-`$ pacman -S vim`
-
-`# cd ~/dotfiles/ && stow vim`
-
-`# vim`
-
-`:PlugInstall`
-
-or ...
-
-## NeoVim
-
-`$ pacman -S neovim`
-
-`# cd ~/dotfiles/ && stow neovim`
-
-`# nvim`
-
-`:MasonInstallAll`
-
-## Yazi
-
-`$ pacman -S yazi`
-
-`# cd ~/dotfiles/ && stow yazi`
-
-`# ya pack -i`
-
-## Postgres
-
-`$ pacman -S postgresql postgis gdal`
-
-`# yay -S pspg pgformatter sqlfluff`
+```sh
+ stow --verbose --target=$HOME --dir=$HOME/.dotfiles --restow */
+```
 
 # Credits
