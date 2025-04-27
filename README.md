@@ -1,10 +1,6 @@
 # Dotfiles
 
-Install dependencies:
-
-```sh
-$ pacman -Syu vim neovim kitty hyprland stow yazi
-```
+<!-- ` $ pacman -Syu vim neovim kitty hyprland stow yazi ` -->
 
 Clone repository:
 
