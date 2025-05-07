@@ -1,9 +1,4 @@
 [[plugin.deps]]
-use = "llanosrocas/yaziline"
-rev = "1342efe"
-hash = "a84a339953a568fee1d8beb63e6dca73"
-
-[[plugin.deps]]
 use = "pirafrank/what-size"
 rev = "f1c6b69"
 hash = "6e789212eb41d937bab04877ca361099"
