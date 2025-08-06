@@ -1,0 +1,11 @@
+[Unit]
+Description=Create a Dropbox backup on local storage
+After=backup_daily_dotfiles.service
+
+[Service]
+ExecStartPre=/usr/bin/sleep 15
+ExecStart=/usr/bin/bash -c 'exec $HOME/.bin/backup_daily_dropbox.sh'
+Type=oneshot
+
+[Install]
+WantedBy=default.target

@@ -1,77 +1,131 @@
-//   _____ _____ _____ _____ _____ _____ _____ _____ _____ 
-//  |   __|  _  |   __|_   _|   __|   __|_   _|     |  |  |
-//  |   __|     |__   | | | |   __|   __| | | |   --|     |
-//  |__|  |__|__|_____| |_| |__|  |_____| |_| |_____|__|__|
-//
-//  by Bina
-
-
-// execute with: fastfetch --colors-block-range-start 9 --colors-block-width 3
-
+//    ______           __  ______      __ 
+//   / ____/___ ______/ /_/ ____/___ _/ /_
+//  / /_  / __ `/ ___/ __/ /   / __ `/ __/
+// / __/ / /_/ (__  ) /_/ /___/ /_/ / /_  
+///_/    \__,_/____/\__/\____/\__,_/\__/  
+//  https://github.com/m3tozz/FastCat
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "source": "~/.config/fastfetch/ascii/arch.txt",
-        "padding": {
-            "top": 2,
-            "right": 6
-        }
-    },
-    "display": {
-        "separator": " "
+        "source": "~/.config/fastfetch/ascii.txt",
+                    "color": {
+        "1": "0"
+    }
     },
     "modules": [
-	"break",
-	"break",
-	{
-            "type": "title",
-            "keyWidth": 10
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+        },
+        {
+            "type": "host",
+            "key": " PC",
+            "keyColor": "green"
+        },
+        {
+            "type": "cpu",
+            "key": "│ ├",
+            "showPeCoreCount": true,
+            "keyColor": "green"
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├󰍛",
+            "keyColor": "green"
+        },
+        {
+            "type": "memory",
+            "key": "│ ├󰍛",
+            "keyColor": "green"
+        },
+        {
+            "type": "disk",
+            "key": "└ └",
+            "keyColor": "green"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
         },
         "break",
         {
+            "type": "custom",
+            "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+        },
+        {
             "type": "os",
-            "key": " ",
-            "keyColor": "33",  // = color3
+            "key": " OS",
+            "keyColor": "yellow"
         },
         {
             "type": "kernel",
-            "key": " ",
-            "keyColor": "33",
+            "key": "│ ├",
+            "keyColor": "yellow"
         },
         {
             "type": "packages",
-            "format": "{} (pacman)",
-            "key": " ",
-            "keyColor": "33",  
+            "key": "│ ├󰏖",
+            "keyColor": "yellow"
         },
         {
             "type": "shell",
-            "key": " ",
-            "keyColor": "33", 
+            "key": "└ └",
+            "keyColor": "yellow"
+        },
+        "break",
+        {
+            "type": "de",
+            "key": " DE",
+            "keyColor": "blue"
         },
         {
-            "type": "terminal",
-            "key": " ",
-            "keyColor": "33", 
+            "type": "lm",
+            "key": "│ ├",
+            "keyColor": "blue"
         },
         {
             "type": "wm",
-            "key": " ",
-            "keyColor": "33", 
+            "key": "│ ├",
+            "keyColor": "blue"
+        },
+        {
+            "type": "wmtheme",
+            "key": "│ ├󰉼",
+            "keyColor": "blue"
+        },
+        {
+            "type": "gpu",
+            "key": "└ └󰍛",
+            "format": "{3}",
+            "keyColor": "blue"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌────────────────────Uptime / Age────────────────────┐"
+        },
+        {
+            "type": "command",
+            "key": "  OS Age ",
+            "keyColor": "magenta",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         {
             "type": "uptime",
-            "key": " ",
-            "keyColor": "33", 
+            "key": "  Uptime ",
+            "keyColor": "magenta"
         },
         {
-            "type": "media",
-            "key": "󰝚 ",
-            "keyColor": "33", 
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
         },
-        "break",
-        "colors",
-        "break",
         "break",
     ]
 }
+
+

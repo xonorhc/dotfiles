@@ -6,10 +6,9 @@
     by Bina
 */
 
-
 @import ".cache/wal/colors-waybar.css";
 
-*{
+* {
   border: none;
   box-shadow: none;
   outline: none;
@@ -19,20 +18,20 @@ window {
   font-size: 14px;
   font-family: "JetBrains Mono";
   background-color: @background;
-  border-radius: 8px;
-  opacity: 0.90;
+  border-radius: 0px;
+  /* opacity: 0.9; */
 }
 
 #outer-box {
   margin: 10px 10px 20px 10px;
   background-color: @background;
-  opacity: 0.90;
+  /* opacity: 0.9; */
 }
 
 #inner-box {
   margin: 10px;
   background-color: @background;
-  opacity: 0.90;
+  /* opacity: 0.9; */
 }
 
 #entry {
@@ -71,5 +70,3 @@ window {
 #scroll {
   margin: 0px;
 }
-
-

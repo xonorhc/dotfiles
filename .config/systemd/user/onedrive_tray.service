@@ -1,0 +1,15 @@
+[Unit]
+Description=OneDrive Free Client tray icon
+Documentation=https://github.com/DanielBorgesOliveira/onedrive_tray
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStartPre=/usr/bin/sleep 15
+ExecStart=/usr/bin/onedrive_tray
+Restart=on-failure
+RestartSec=7
+RestartPreventExitStatus=3
+
+[Install]
+WantedBy=default.target

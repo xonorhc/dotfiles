@@ -1,0 +1,15 @@
+[Unit]
+Description=Dropbox
+# exec /usr/bin/flatpak run --branch=stable --arch=x86_64 com.dropbox.Client "$@"
+
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/sleep 15
+ExecStart=/usr/bin/dropbox
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+

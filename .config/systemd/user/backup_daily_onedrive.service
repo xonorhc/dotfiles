@@ -1,0 +1,11 @@
+[Unit]
+Description=Create a OneDrive backup on local storage
+After=pg_backup_src_aguasdosertao.service
+
+[Service]
+ExecStartPre=/usr/bin/sleep 15
+ExecStart=%h/.bin/backup_daily_onedrive.sh
+Type=oneshot
+
+[Install]
+WantedBy=default.target

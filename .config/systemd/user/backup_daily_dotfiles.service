@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup of dotfiles to Dropbox
+
+[Service]
+ExecStartPre=/usr/bin/sleep 15
+ExecStart=/usr/bin/bash -c 'exec $HOME/.bin/backup_daily_dotfiles.sh'
+Type=oneshot
+
+[Install]
+WantedBy=default.target

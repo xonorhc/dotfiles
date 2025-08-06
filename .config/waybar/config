@@ -22,22 +22,24 @@
 	"exclusive": true,
 	
 	// modules
-	"modules-left": [
-	    "hyprland/workspaces",
-            "wlr/taskbar"
-        ],
-        
-        "modules-center": [
-            "clock"
-        ],
-        
-       "modules-right": [
-           "group/hardware",
-           "pulseaudio",
-           "bluetooth",
-           "network",
-           "battery", 
-           "custom/exit"
-        ]
+    "modules-left": [
+    "hyprland/workspaces",
+    "wlr/taskbar"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "group/hardware",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "backlight",
+    "battery", 
+    "tray",
+    "custom/exit"
+  ]
 }
 
