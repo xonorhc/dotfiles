@@ -1,0 +1,47 @@
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "cfb9140"
+hash = "b5067143415bd2d46c0dfa57319ddcef"
+
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "d896656"
+hash = "62251f94eb67648d42cdfcfb8be0fad2"
+
+[[plugin.deps]]
+use = "Lil-Dank/lazygit"
+rev = "a90fc71"
+hash = "894e801b788d0fca94627b58f8c9e1d4"
+
+[[plugin.deps]]
+use = "larry-oates/open-git-remote"
+rev = "95b3043"
+hash = "8d17dcc063217b558a08ed8bb5e9e8ad"
+
+[[plugin.deps]]
+use = "Ape/open-with-cmd"
+rev = "433cf30"
+hash = "86e0312b01bc5762813c6c1d0517f073"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "7ca66b4"
+hash = "d2aa1b2f32c8b4fd1775e8f5c45f8fab"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "7ca66b4"
+hash = "4fccaaf10c36dc2466e2438a386ff017"
+
+[[plugin.deps]]
+use = "Ape/simple-status"
+rev = "d0da104"
+hash = "68603fdd1dcaf415227e2c77a9317947"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:no-status"
+rev = "7ca66b4"
+hash = "3e023d31f29201efdac2a6ae35fedb78"
+
+[flavor]
+deps = []
