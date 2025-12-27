@@ -1,0 +1,21 @@
+return {
+  "mistricky/codesnap.nvim",
+  build = "make",
+  cmd = { "CodeSnap" },
+  opts = {
+    mac_window_bar = false,
+    title = "CodeSnap.nvim",
+    code_font_family = "SpaceMono Nerd Font",
+    watermark_font_family = "SpaceMono Nerd Font",
+    watermark = "",
+    bg_theme = "sea",
+    breadcrumbs_separator = "/",
+    has_breadcrumbs = false,
+    has_line_number = false,
+    show_workspace = false,
+    min_width = 0,
+    bg_x_padding = 25,
+    bg_y_padding = 25,
+    save_path = os.getenv "XDG_PICTURES_DIR" or (os.getenv "HOME" .. "/Pictures"),
+  },
+}
