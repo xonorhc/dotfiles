@@ -2,9 +2,7 @@
 //  | | | |     |   __|_|
 //  | | | |  |  |   __| |
 //  |_____|_____|__|  |_|  CONFIG
-//  
 //  by Bina
-
 
 mode=drun
 allow_images=true
@@ -14,7 +12,6 @@ columns=1
 width=480
 height=330
 no_actions=true
-monitor=DP-1
 location=center
 colors=colors
 filter_rate=100
@@ -32,5 +29,3 @@ line_wrap=char
 key_down=Tab
 key_expand=Right
 key_forward=Down
-
-
