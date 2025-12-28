@@ -5,7 +5,6 @@
 #
 #  by Bina
 
-
 # -- $PATH variable --
 export PATH=$HOME/bin:/usr/bin:/usr/local/bin:$PATH
 
@@ -19,7 +18,6 @@ plugins=(
     zsh-autosuggestions
     zsh-autocomplete
     zsh-syntax-highlighting
-    fast-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -28,8 +26,8 @@ CASE_SENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 # -- pywal --
-source ~/.cache/wal/colors-tty.sh
 (cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
 
 # -- xcursor --
 export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
@@ -43,16 +41,6 @@ export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
 eval "$(zoxide init --cmd cd zsh)"
 
 # -- aliases --
-# can be written to a separate file in $ZSH/custom
-alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME" # this is for my personal dotfiles repo
-alias zsh="vim ~/.zshrc"
-alias szsh="source ~/.zshrci"
-alias fetch="c;fastfetch --colors-block-range-start 9 --colors-block-width 3;"
-# -g : global aliases work anywhere on the command line
-alias -g G='| grep'
-alias -g L='| less'
-alias -g W='| wc -l'
-alias -g H='| head'
 alias c="clear"
 alias vd="vim diff"
 alias gcl="git clone"
@@ -72,5 +60,41 @@ alias gd="git diff"
 alias gra="git remote add"
 alias grr="git remote rm"
 alias gsh="git stash"
-alias fastfetch-theme-selector="bash ~/.config/fastfetch-theme-selector/FastCat/fastcat.sh -s"
 
+# -- enviroments variables --
+export EDITOR=nvim
+export BROWSER=zen-browser
+
+# -- postgres variables --
+export PGHOST='localhost'
+export PGPORT='5432'
+export PGDATABASE='postgres'
+export PGUSER='postgres'
+export DATABASE_URL="postgres://$PGUSER:@$PGHOST:$PGPORT/$PGDATABASE"
+export PSQL_PAGER="pspg"
+
+# -- yazi --
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+if [[ -n "$YAZI_ID" ]]; then
+	function _yazi_cd() {
+		ya emit cd "$PWD"
+	}
+	add-zsh-hook zshexit _yazi_cd
+fi
+
+# -- fastfetch --
+if [[ $(tty) == *"pts"* ]]; then
+    fastfetch
+else
+    echo
+    if [ -f /bin/hyprctl ]; then
+        echo "Start Hyprland with command Hyprland"
+    fi
+fi
