@@ -5,65 +5,80 @@
 ///_/    \__,_/____/\__/\____/\__,_/\__/
 //  https://github.com/m3tozz/FastCat
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-         "source": "~/.config/fastfetch/ascii.txt",
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": null,
+  "display": {
+    "separator": "  "
+  },
+  "modules": [
+    {
+      "key": "╭───────────╮",
+      "type": "custom"
     },
-    "display": {
-        "separator": "  ",
-        "constants": [
-            "─────────────────" // {$1}, used in Custom module
-        ],
-        "key": {
-            "type": "icon",
-            "paddingLeft": 2
-        }
+    {
+      "key": "│ {#31} user    {#keys}│",
+      "type": "title",
+      "format": "{user-name}"
     },
-    "modules": [
-        {
-            "type": "custom", // HardwareStart
-            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
-            "format": "┌{$1} {#1}Hardware Information{#} {$1}┐"
-        },
-        "host",
-        "cpu",
-        "gpu",
-        "disk",
-        "memory",
-        "swap",
-	
-        {
-            "type": "custom", // SoftwareStart
-            "format": "├{$1} {#1}Software Information{#} {$1}┤"
-        },
-        {
-            "type": "title",
-            "keyIcon": "",
-            "key": "Title", // Title module has no key by default, so that icon is not displayed
-            "format": "{user-name}@{host-name}"
-        },
-        "os",
-        "kernel",
-        "de",
-        "wm",
-        "shell",
-        "terminal",
-        "terminalfont",
-        "packages",
-        "uptime",
-	        {
-            "type": "localip",
-            "compact": true
-        },
-        {
-            "type": "publicip",
-            "timeout": 1000
-        },
-	
-
-        {
-            "type": "custom", // InformationEnd
-            "format": "└{$1}──────────────────────{$1}┘"
-        },
-    ]
+    {
+      "key": "│ {#32}󰇅 hname   {#keys}│",
+      "type": "title",
+      "format": "{host-name}"
+    },
+    {
+      "key": "│ {#33}󰅐 uptime  {#keys}│",
+      "type": "uptime"
+    },
+    {
+      "key": "│ {#34}{icon} distro  {#keys}│",
+      "type": "os"
+    },
+    {
+      "key": "│ {#35} kernel  {#keys}│",
+      "type": "kernel"
+    },
+    {
+      "key": "│ {#36}󰇄 desktop {#keys}│",
+      "type": "de"
+    },
+    {
+      "key": "│ {#31} term    {#keys}│",
+      "type": "terminal"
+    },
+    {
+      "key": "│ {#32} shell   {#keys}│",
+      "type": "shell"
+    },
+    {
+      "key": "│ {#33}󰍛 cpu     {#keys}│",
+      "type": "cpu",
+      "showPeCoreCount": true
+    },
+    {
+      "key": "│ {#34}󰉉 disk    {#keys}│",
+      "type": "disk",
+    },
+    {
+      "key": "│ {#35} memory  {#keys}│",
+      "type": "memory"
+    },
+    {
+      "key": "│ {#36}󰩟 network {#keys}│",
+      "type": "localip",
+      "format": "{ipv4} ({ifname})"
+    },
+    {
+      "key": "├───────────┤",
+      "type": "custom"
+    },
+    {
+      "key": "│ {#39} colors  {#keys}│",
+      "type": "colors",
+      "symbol": "circle"
+    },
+    {
+      "key": "╰───────────╯",
+      "type": "custom"
+    }
+  ]
 }
