@@ -4,24 +4,21 @@
 //  |_____|__|__| |_| |_____|__|__|__|__|  CONFIG
 //
 //  by Bina
-
 {
-	// load modules
-	"include": "~/.config/waybar/modules.json",
-	
-	// general settings
-	"position": "top",
-	"margin-top": 8,
-	"margin-bottom": 0,
-	"layer": "top",
-	"margin-left": 8,
-	"margin-right": 8,    
-	"spacing": 10,
-	"fixed-center": true,
-	"exclusive": true,
-	
-	// modules
-    "modules-left": [
+  // load modules
+  "include": "~/.config/waybar/modules.jsonc",
+  // general settings
+  "position": "top",
+  "margin-top": 8,
+  "margin-bottom": 0,
+  "layer": "top",
+  "margin-left": 8,
+  "margin-right": 8,
+  "spacing": 10,
+  "fixed-center": true,
+  "exclusive": true,
+  // modules
+  "modules-left": [
     "hyprland/workspaces",
     "cpu",
     "temperature",
@@ -30,11 +27,9 @@
     "tray",
     "custom/notification"
   ],
-
   "modules-center": [
     "clock"
   ],
-
   "modules-right": [
     "pulseaudio",
     "bluetooth",

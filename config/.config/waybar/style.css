@@ -9,10 +9,10 @@
 /* pywal colors */
 @import "../../.cache/wal/colors-waybar.css";
 @define-color text #ffffff;
-@define-color tt alpha(@background,0.5);
+@define-color tt alpha(@background, 0.5);
 @define-color ws @color1;
-@define-color tb alpha(@color8,0.3);
-@define-color tbh alpha(@color8,1);
+@define-color tb alpha(@color8, 0.3);
+@define-color tbh alpha(@color8, 1);
 @define-color clock @color3;
 @define-color set @color1;
 
@@ -98,11 +98,11 @@ tooltip label {
 }
 
 /* modules */
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
   margin-left: 10;
 }
 
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
   margin-right: 0;
 }
 
@@ -197,11 +197,11 @@ tooltip label {
   padding: 0px 15px 0px 0px;
 }
 
-#tray > .passive {
+#tray>.passive {
   -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
   -gtk-icon-effect: highlight;
 }
 
