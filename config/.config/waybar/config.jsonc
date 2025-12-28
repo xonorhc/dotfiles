@@ -23,7 +23,12 @@
 	// modules
     "modules-left": [
     "hyprland/workspaces",
-    "wlr/taskbar"
+    "cpu",
+    "temperature",
+    "disk",
+    "memory",
+    "tray",
+    "custom/notification"
   ],
 
   "modules-center": [
@@ -31,13 +36,11 @@
   ],
 
   "modules-right": [
-    "group/hardware",
     "pulseaudio",
     "bluetooth",
     "network",
     "backlight",
-    "battery", 
-    "tray",
+    "battery",
     "custom/exit"
   ]
 }

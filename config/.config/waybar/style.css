@@ -8,23 +8,27 @@
 
 /* pywal colors */
 @import "../../.cache/wal/colors-waybar.css";
-@define-color ws @color4;
-@define-color tt @color1;
+@define-color text #ffffff;
+@define-color tt alpha(@background,0.5);
+@define-color ws @color1;
+@define-color tb alpha(@color8,0.3);
+@define-color tbh alpha(@color8,1);
 @define-color clock @color3;
-@define-color set @color4;
-@define-color tb rgba(200,200,200,0.2);
-@define-color tbh @color5;
-@define-color text #FFFFFF;
+@define-color set @color1;
 
 /* general */
 * {
-  font-family: "JetBrains Mono";
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  color: @text;
   border: none;
   border-radius: 5px;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: alpha(@background, 0.5);
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -35,29 +39,22 @@ window#waybar {
   padding: 0px 0px;
   border-radius: 5px;
   border: 0px;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  color: @text;
   opacity: 0.9;
 }
 
 #workspaces button {
   margin: 0px 2px;
   padding: 0px 5px;
-  color: @text;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-  color: @text;
   background: @ws;
   transition: all 0.3s ease-in-out;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 #workspaces button:hover {
-  color: @text;
   background: @ws;
   opacity: 0.9;
   border: none;
@@ -88,17 +85,16 @@ window#waybar {
 tooltip {
   border-radius: 5px;
   background-color: @tt;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 tooltip label {
   border-radius: 5px;
   background-color: @tt;
-  opacity: 0.8;
+  opacity: 1;
   padding: 0px;
   margin: -5px 0px;
   font-size: 12px;
-  color: @text;
 }
 
 /* modules */
@@ -113,12 +109,10 @@ tooltip label {
 /* clock */
 #clock {
   background-color: @clock;
-  font-size: 16px;
-  color: @text;
   border-radius: 5px;
   padding: 1px 10px 0px 10px;
   margin: 4px 1px;
-  opacity: 0.9;
+  opacity: 1;
   border: none;
 }
 
@@ -129,40 +123,32 @@ tooltip label {
 #memory {
   margin: 0px;
   padding: 0px;
-  font-size: 16px;
-  color: @text;
 }
 
 /* audio */
 #pulseaudio {
   background-color: @set;
-  font-size: 16px;
-  color: @text;
   border-radius: 5px;
   padding: 1px 10px 0px 10px;
   margin: 4px 1px 4px -15px;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* network */
 #network {
   background-color: @set;
-  font-size: 16px;
-  color: @text;
   border-radius: 5px;
   padding: 1px 10px 0px 10px;
   margin: 4px 1px;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 #network.ethernet {
   background-color: @set;
-  color: @text;
 }
 
 #network.wifi {
   background-color: @set;
-  color: @text;
 }
 
 /* bluetooth */
@@ -171,41 +157,34 @@ tooltip label {
 #bluetooth.connected,
 #bluetooth.off {
   background-color: @set;
-  font-size: 16px;
-  color: @text;
   border-radius: 5px;
   padding: 1px 10px 0px 10px;
   margin: 4px 1px;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* battery */
 #battery {
   background-color: @set;
-  font-size: 16px;
-  color: @text;
   border-radius: 5px;
   padding: 1px 10px 0px 10px;
   margin: 4px 1px;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 #battery.charging,
 #battery.plugged {
-  color: @text;
   background-color: @set;
 }
 
 @keyframes blink {
   to {
     background-color: @set;
-    color: @text;
   }
 }
 
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
-  color: @text;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -216,7 +195,6 @@ tooltip label {
 /* tray */
 #tray {
   padding: 0px 15px 0px 0px;
-  color: @text;
 }
 
 #tray > .passive {
@@ -232,33 +210,28 @@ tooltip label {
   margin: 0px 18px 0px 5px;
   padding: 0px;
   font-size: 20px;
-  color: @text;
 }
 
 #custom-system {
   margin-right: 15px;
   font-size: 20px;
   font-weight: bold;
-  opacity: 0.8;
-  color: @text;
+  opacity: 1;
 }
 
 #custom-settings {
   margin-right: 0px;
   font-size: 20px;
   font-weight: bold;
-  opacity: 0.8;
-  color: @text;
+  opacity: 1;
 }
 
 #custom-updates {
   background-color: @set;
-  font-size: 16px;
-  color: @text;
   border-radius: 5px;
   padding: 2px 10px 0px 10px;
   margin: 8px 15px 8px 0px;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 #custom-updates.green {
@@ -267,21 +240,17 @@ tooltip label {
 
 #custom-updates.yellow {
   background-color: #ff9a3c;
-  color: #ffffff;
 }
 
 #custom-updates.red {
   background-color: #dc2f2f;
-  color: #ffffff;
 }
 
 /* backlight */
 #backlight {
   background-color: @set;
-  font-size: 16px;
-  color: @text;
   border-radius: 5px;
   padding: 1px 10px 0px 10px;
   margin: 4px 1px;
-  opacity: 0.9;
+  opacity: 1;
 }
