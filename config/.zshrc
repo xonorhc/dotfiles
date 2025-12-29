@@ -63,9 +63,9 @@ alias gsh="git stash"
 
 # -- enviroments variables --
 export EDITOR=nvim
-export BROWSER=zen-browser
+export BROWSER=firefox
 
-# -- postgres variables --
+# -- postgres --
 export PGHOST='localhost'
 export PGPORT='5432'
 export PGDATABASE='postgres'
