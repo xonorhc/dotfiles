@@ -13,5 +13,5 @@
 # https://github.com/xwmx/nb
 ###############################################################################
 
-export NB_DIR="${NB_DIR:-$HOME/Documents/notes}" # Set by `nb` • Wed Oct 29 08:01:31 PM -03 2025
+export NB_DIR="${NB_DIR:-$HOME/.nb}" # Set by `nb` • Wed Oct 29 08:01:31 PM -03 2025
 export NB_DEFAULT_TEMPLATE="$HOME/.local/share/nb/templates/markdown"
