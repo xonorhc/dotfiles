@@ -11,9 +11,9 @@ highlight: true
 indent_character: "|"
 journals:
   default:
-    journal: ~/Documents/journal
+    journal: ~/.jrnl
   study:
-    journal: ~/Documents/journal/studies.adoc
+    journal: ~/.jrnl/studies.adoc
     template: ~/.local/share/jrnl/templates/asciidoc.adoc
 linewrap: 79
 tagsymbols: "#@"
