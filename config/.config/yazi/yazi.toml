@@ -17,11 +17,11 @@ mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}"
 run  = "ouch"
 
 [[plugin.prepend_fetchers]]
-id   = "git"
-name = "*"  # use `url` if you're using the nightly version of Yazi
-run  = "git"
+id  = "git"
+url = "*"
+run = "git"
 
 [[plugin.prepend_fetchers]]
-id   = "git"
-name = "*/"  # use `url` if you're using the nightly version of Yazi
-run  = "git"
+id  = "git"
+url = "*/"
+run = "git"
