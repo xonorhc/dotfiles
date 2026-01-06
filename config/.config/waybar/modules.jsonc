@@ -83,26 +83,26 @@
   "cpu": {
     "interval": 1,
     "format": "󰍛 {usage}%",
-    "on-click": "kitty -e btop"
+    "on-click": "kitty --class dotfiles-floating -e btop"
   },
   // temperature
   "temperature": {
     "interval": 1,
     "format": "󰈸 {temperatureC}°C",
-    "on-click": "kitty -e btop"
+    "on-click": "kitty --class dotfiles-floating -e btop"
   },
   // harddisc space
   "disk": {
     "interval": 60,
     "format": "󰋊 {percentage_used}%",
     "path": "/",
-    "on-click": "kitty -e btop"
+    "on-click": "kitty --class dotfiles-floating -e btop"
   },
   // memory
   "memory": {
     "interval": 1,
     "format": " {}%",
-    "on-click": "kitty -e btop"
+    "on-click": "kitty --class dotfiles-floating -e btop"
   },
   // audio
   "pulseaudio": {
