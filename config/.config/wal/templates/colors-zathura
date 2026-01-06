@@ -1,6 +1,3 @@
-# -----------------------------------------------------------------------------
-# Zathura settings
-# -----------------------------------------------------------------------------
 set default-bg "{background}"
 set statusbar-fg '{color7}'
 set statusbar-bg '{color0}'
@@ -26,9 +23,6 @@ set recolor-reverse-video 'false'
 set selection-clipboard "clipboard"
 set adjust-open width
 
-# -----------------------------------------------------------------------------
-# Zathura mappings
-# -----------------------------------------------------------------------------
 set guioptions none
 map [normal]     z zoom in
 map [normal]     Z zoom out
