@@ -67,9 +67,9 @@ local options = {
   },
 
   ignore_errors = false, -- Set to true to ignore errors
-  default_format_opts = { lsp_format = "fallback" }, -- Set this to change the default values when calling conform.format()
-  format_on_save = { timeout_ms = 500 }, -- If this is set, Conform will run the formatter on save.
-  format_after_save = { lsp_format = "fallback" }, -- If this is set, Conform will run the formatter asynchronously after save.
+  -- default_format_opts = { lsp_format = "fallback" }, -- Set this to change the default values when calling conform.format()
+  -- format_on_save = { timeout_ms = 500 }, -- If this is set, Conform will run the formatter on save.
+  -- format_after_save = { lsp_format = "fallback" }, -- If this is set, Conform will run the formatter asynchronously after save.
   notify_on_error = true, -- Conform will notify you when a formatter errors
   notify_no_formatters = true, -- Conform will notify you when no formatters are available for the buffer
 
