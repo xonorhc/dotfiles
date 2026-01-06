@@ -12,5 +12,3 @@ Status:children_add(function(self)
 end, 3300, Status.LEFT)
 
 require("git"):setup()
-
-require("simple-status"):setup() -- require("no-status"):setup()
