@@ -1,6 +1,5 @@
 [The short description of this journal]
 = Journal Title
-:author: Heron Golin
 :keywords: @studies
 
 The journal body starts here.
