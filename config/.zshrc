@@ -32,14 +32,6 @@ source ~/.cache/wal/colors-tty.sh
 # -- xcursor --
 export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
 
-# -- zoxide --
-# z as alternative to cd navigating via path fragments
-# case insensitive, only last component must match the path
-# frecency algorithm (combination of frequency and recency)
-# interactive zoxide zi lists visited dirs with their score
-# rebind cd command using cd and cdi
-eval "$(zoxide init --cmd cd zsh)"
-
 # -- aliases --
 alias c="clear"
 alias vd="vim diff"
