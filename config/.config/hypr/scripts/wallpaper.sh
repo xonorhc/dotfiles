@@ -6,14 +6,14 @@
 #
 #  by Bina
 
-current_wp="$HOME/Pictures/wallpapers/current_wallpaper"
-blurred_wp="$HOME/Pictures/wallpapers/current_wallpaper_blurred.png"
+current_wp="$HOME/.local/share/wallpapers/current_wallpaper"
+blurred_wp="$HOME/.local/share/wallpapers/current_wallpaper_blurred.png"
 blur="50x30"
 
 # write path to wp into file
 if [ ! -f $current_wp ]; then
   touch $current_wp
-  echo "$HOME/Pictures/wallpapers/default.png" >"$current_wp"
+  echo "$HOME/.local/share/wallpapers/default.png" >"$current_wp"
 fi
 
 # current wallpaper path
@@ -25,17 +25,17 @@ case $1 in
   if [ -f $current_wp ]; then
     wal -q -i $current_wallpaper
   else
-    wal -q -i ~/Pictures/wallpapers/
+    wal -q -i ~/.local/share/wallpapers/
   fi
   ;;
 # random wallpaper
 *)
-  wal -q -i ~/Pictures/wallpapers/
+  wal -q -i ~/.local/share/wallpapers/
   ;;
 esac
 
 # new wallpaper name
-new_wp=$(echo $wallpaper | sed "s|$HOME/Pictures/wallpapers/||g")
+new_wp=$(echo $wallpaper | sed "s|$HOME/.local/share/wallpapers/||g")
 
 # launch waybar based on new wallpaper colors
 source "$HOME/.cache/wal/colors.sh"
