@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DATA_DIR="dotfiles"
-BACKUP_DIR="$HOME/backups"
+BACKUP_DIR="$HOME/Dropbox/dotfiles/binas"
 
 datestamp=$(date +'%Y-%m-%d')
 timestamp=$(date +'%H%M')
@@ -14,7 +14,7 @@ function perform_backups() {
     exit 1
   fi
 
-  tar --exclude-from="exclude_list.txt" -cv -J -f "$FINAL_BACKUP_DIR"/"$DATA_DIR"_"$datestamp"_"$timestamp".tar.xz "$HOME/.$DATA_DIR"
+  tar --exclude=".git" -cv -J -f "$FINAL_BACKUP_DIR"/"$DATA_DIR"_"$datestamp"_"$timestamp".tar.xz "$HOME/.$DATA_DIR"
 }
 
 DAY_OF_WEEK_TO_KEEP=5
