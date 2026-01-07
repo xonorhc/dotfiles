@@ -18,7 +18,7 @@
 
 window {
   background-image: image(
-    url("../../Pictures/wallpapers/current_wallpaper_blurred.png")
+    url("../../.local/share/wallpapers/current_wallpaper_blurred.png")
   );
 }
 
