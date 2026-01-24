@@ -1,0 +1,11 @@
+# {{title}}
+
+{{date +"%F %r"}}
+
+## Tags
+
+{{tags}}
+
+## Content
+
+{{content}}

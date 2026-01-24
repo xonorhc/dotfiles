@@ -1,0 +1,17 @@
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+x-scheme-handler/http=userapp-Zen-FJDFI3.desktop
+x-scheme-handler/https=userapp-Zen-FJDFI3.desktop
+x-scheme-handler/chrome=userapp-Zen-FJDFI3.desktop
+text/html=userapp-Zen-FJDFI3.desktop
+application/x-extension-htm=userapp-Zen-FJDFI3.desktop
+application/x-extension-html=userapp-Zen-FJDFI3.desktop
+application/x-extension-shtml=userapp-Zen-FJDFI3.desktop
+application/xhtml+xml=userapp-Zen-FJDFI3.desktop
+application/x-extension-xhtml=userapp-Zen-FJDFI3.desktop
+application/x-extension-xht=userapp-Zen-FJDFI3.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Zen-FJDFI3.desktop;
+x-scheme-handler/https=userapp-Zen-FJDFI3.desktop;
+x-scheme-handler/chrome=userapp-Zen-FJDFI3.desktop;

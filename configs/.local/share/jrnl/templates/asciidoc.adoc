@@ -1,0 +1,5 @@
+[The short description of this journal]
+= Journal Title
+:keywords: @studies
+
+The journal body starts here.

@@ -1,0 +1,10 @@
+[[database]]
+Name = 'database'
+Provider = 'postgres'
+DBName = 'postgres'
+URL = 'pg://postgres:postgres@localhost/postgres?sslmode=disable'
+
+[application]
+DefaultPageSize = 300
+DisableSidebar = true
+# SidebarOverlay = false
